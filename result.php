@@ -67,7 +67,7 @@
 											$arr= explode('##',$med_a['text']);
 											echo$Parsedown->text($arr[1]);
 											#echo $med_a['text'];
-										} if else {
+										} else if {
 											if (strcasecmp($_GET["lvl"], "Mediocre")==0){
 											$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
 											$arr= explode('##',$med_a['text']);
