@@ -56,7 +56,7 @@
 
 							<br>
 							<h4> This is a Learning Analytics (COSC 419C) Project with a focus on taking a user's <br>
-								 level of understanding and providing the information according to their level. </h4> 
+								 level of understanding and providing the information according to what they can understand. </h4> 
 							<br>
 							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 
@@ -83,6 +83,7 @@
 								<br>
 								Level of Understanding:<br>
 								<br> Basic: <input type="radio" name="lvl" value="Basic"> <br>
+								Mediocre: <input type= "radio" name="lvl" value ="Mediocre"> <br>
 								Expert: <input type="radio" name="lvl" value="Expert"> </h3>
 								<br>
 								<br>
