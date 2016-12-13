@@ -55,7 +55,7 @@
 
 							<br>
 							<h4> This is a Learning Analytics (COSC 419C) Project with a focus on taking a user's <br>
-								 level of understanding and providing the information according to the their level. </h4> 
+								 level of understanding and providing the information according to their level. </h4> 
 							<br>
 							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 
@@ -68,9 +68,12 @@
 								$string = file_get_contents("data.json");
 								$json_a = json_decode($string,true);
 
-								foreach ($json_a as $med_name => $med_a)
-								?> <option value = "<?php $med_a['title']?>"> <?php $med_a['title']?> </option>
-								</select><br>
+								foreach ($json_a as $med_name => $med_a){
+								?> <option value = "<?php $med_a['title']?>"> <?php $med_a['title']?> </option> 
+								<?php } ?>
+								</select>
+									
+								<br>
 								<br>
 								Level of Understanding:<br>
 								<br> Basic: <input type="radio" name="lvl" value="Basic"> <br>
