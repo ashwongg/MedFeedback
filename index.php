@@ -16,7 +16,7 @@
 
 		<!-- Custom CSS -->
 		<link href="css/simple-sidebar.css" rel="stylesheet">
-		<script src = "js/script.js"></script>
+	
 		<script type="text/Javacript" src"js/jquery-3.1.1.min.js"></script>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -60,10 +60,16 @@
 							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 
 							<form method="get" action="result.php">
-						
+							
 								<h3>Disease or Condition: </h3>
+							
 								<select id ="sel" name="name"> 
+								<?php
+								$string = file_get_contents("data.json");
+								$json_a = json_decode($string,true);
 
+								foreach ($json_a as $med_name => $med_a)
+								?> <option value = "<?php $med_a['title']?>"> <?php $med_a['title']?> </option>
 								</select><br>
 								<br>
 								Level of Understanding:<br>

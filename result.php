@@ -54,7 +54,6 @@
 								include 'Parsedown.php'; 
 								$Parsedown = new Parsedown();
 
-
 								$name = $_GET["name"]; 
 								echo "<h2> $name </h2>";
 								$string = file_get_contents("data.json");
