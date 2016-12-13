@@ -16,6 +16,7 @@
 
 		<!-- Custom CSS -->
 		<link href="css/simple-sidebar.css" rel="stylesheet">
+		<link href="css/jquery-ui.css" rel="stylesheet">
 	
 		<script type="text/Javacript" src"js/jquery-3.1.1.min.js"></script>
 
@@ -62,15 +63,20 @@
 							<form method="get" action="result.php">
 							
 								<h3>Disease or Condition: </h3>
-							
+								<p>Search using the entry field or choose from the dropdown box.</p>
+								<input type="text" id="autocomplete" placeholder="Search"/>
+								<br />
+								<br />
 								<select id ="sel" name="name"> 
-								<?php
-								$string = file_get_contents("data.json");
-								$json_a = json_decode($string,true);
-
-								foreach ($json_a as $med_name => $med_a){
-								?> <option value = "<?php $med_a['title']?>"> <?php $med_a['title']?> </option> 
-								<?php } ?>
+									<?php
+									$string = file_get_contents("data.json");
+									$json_a = json_decode($string,true);
+									sort($json_a);
+									foreach ($json_a as $key => $med_a) { ?>
+										<option value = "<?php echo($med_a['title']);?>">
+											<?php echo($med_a['title']);?>
+										</option> 
+									<?php } ?>
 								</select>
 									
 								<br>
@@ -99,10 +105,27 @@
 
 			<!-- jQuery -->
 			<script src="js/jquery.js"></script>
+			<script src="js/jquery-ui.min.js"></script>
 
 			<!-- Bootstrap Core JavaScript -->
 			<script src="js/bootstrap.min.js"></script>
+			<script>
+				var titles = [
+				<?php foreach ($json_a as $key => $med_a) {
+					echo("'" . str_replace("'", "\\'", $med_a['title']) . "',");
+				} ?>
+				]
 
+				$('#autocomplete').autocomplete({source: titles, select: function(event, ui) {
+					$('#sel').val(ui.item.label)
+					//too quick to clear it so we wait 50ms
+					window.setTimeout(function(){
+						$('#autocomplete').val('')
+					}, 100)
+				}}).on('blur', function() {
+					$(this).val('')
+				})
+			</script>
 			<!-- Menu Toggle Script -->
 			<script>
 			$("#menu-toggle").click(function(e) {
