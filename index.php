@@ -58,7 +58,6 @@
 							<h4> This is a Learning Analytics (COSC 419C) Project with a focus on taking a user's <br>
 								 level of understanding and providing the information according to what they can understand. </h4> 
 							<br>
-							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 
 							<form method="get" action="result.php">
 							
@@ -91,6 +90,8 @@
 							</form>
 							<br>
 							<h4> Information provided by MayoClinic.org</h4> 
+							<br>
+							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 							<br>
 							<h5> Created by: Ashley Wong (32297129) </h5> 
 
