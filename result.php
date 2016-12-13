@@ -67,12 +67,15 @@
 											$arr= explode('##',$med_a['text']);
 											echo$Parsedown->text($arr[1]);
 											#echo $med_a['text'];
-										} else if {
-											if (strcasecmp($_GET["lvl"], "Mediocre")==0){
-											$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
+										} else if (strcasecmp($_GET["lvl"], "Mediocre")==0){
+											#$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
 											$arr= explode('##',$med_a['text']);
 											echo$Parsedown->text($arr[1]);
-											echo$Parsedown->text($arr[2]);
+												if (empty($arr[2])){
+													echo('');
+												} else { 
+													echo$Parsedown->text($arr[2]);
+												}
 										} else { 
 											echo $Parsedown->text($med_a['text']);
 											#echo $med_a['text'];
