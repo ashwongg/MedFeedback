@@ -16,6 +16,8 @@
 
 		<!-- Custom CSS -->
 		<link href="css/simple-sidebar.css" rel="stylesheet">
+		<script src = "js/script.js"></script>
+		<script type="text/Javacript" src"js/jquery-3.1.1.min.js"></script>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +60,11 @@
 							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 
 							<form method="get" action="result.php">
-								<h3>Disease or Condition: <input type="text" name="name"><br>
+						
+								<h3>Disease or Condition: </h3>
+								<select id ="sel" name="name"> 
+
+								</select><br>
 								<br>
 								Level of Understanding:<br>
 								<br> Basic: <input type="radio" name="lvl" value="Basic"> <br>

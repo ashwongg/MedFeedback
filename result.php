@@ -51,6 +51,10 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<?php
+								include 'Parsedown.php'; 
+								$Parsedown = new Parsedown();
+
+
 								$name = $_GET["name"]; 
 								echo "<h2> $name </h2>";
 								$string = file_get_contents("data.json");
@@ -62,14 +66,11 @@
 										if (strcasecmp($_GET["lvl"], "Basic")==0){
 											$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
 											$arr= explode('##',$med_a['text']);
-											echo $arr[1];
+											echo$Parsedown->text($arr[1]);
 											#echo $med_a['text'];
 										} else {
-											$med_a['text'] = str_replace("[By Mayo Clinic Staff](http://www.mayoclinic.org/about-this-site/welcome)","",$med_a['text']);
-											$med_a['text'] = str_replace("#","",$med_a['text']);
-											$med_a['text'] = str_replace("*","",$med_a['text']);
-											$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
-											echo $med_a['text'];
+											echo $Parsedown->text($med_a['text']);
+											#echo $med_a['text'];
 										}
 									}
 
