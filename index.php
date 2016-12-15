@@ -55,7 +55,7 @@
 							<h2> Medical Feedback </h2> 
 
 							<br>
-							<h4> This is a Learning Analytics (COSC 419C) Project with a focus on taking a user's <br>
+							<h4> This is a Learning Analytics (COSC 419C) Project with a focus on taking a user's
 								 level of understanding and providing the information according to what they can understand. </h4> 
 							<br>
 
@@ -91,7 +91,7 @@
 							<br>
 							<h4> Information provided by MayoClinic.org</h4> 
 							<br>
-							<h4> Choose a disease and condition from here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
+							<h4> All the diseases and conditions can be found here: <a href="http://www.mayoclinic.org/diseases-conditions/index">Diseases and Conditions</a></h4>
 							<br>
 							<h5> Created by: Ashley Wong (32297129) </h5> 
 
