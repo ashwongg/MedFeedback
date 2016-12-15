@@ -71,11 +71,11 @@
 											#$med_a['text'] = str_replace("\n\n","<br><br>",$med_a['text']);
 											$arr= explode('##',$med_a['text']);
 											echo$Parsedown->text($arr[1]);
-												if (empty($arr[2])){
+												if (empty($arr[2]) && empty($arr[3]) && empty($arr[4])){
 													echo('');
 												} else { 
-													echo$Parsedown->text($arr[2]);
-												}
+													echo$Parsedown->text($arr[2] && $arr[3] && $arr[4]);
+												} 
 										} else { 
 											echo $Parsedown->text($med_a['text']);
 											#echo $med_a['text'];
